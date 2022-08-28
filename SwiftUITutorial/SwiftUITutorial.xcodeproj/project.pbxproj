@@ -38,7 +38,9 @@
 				9BB31FAF28BB1BBB0035B76F /* SwiftUITutorial */,
 				9BB31FAE28BB1BBB0035B76F /* Products */,
 			);
+			indentWidth = 2;
 			sourceTree = "<group>";
+			tabWidth = 2;
 		};
 		9BB31FAE28BB1BBB0035B76F /* Products */ = {
 			isa = PBXGroup;
