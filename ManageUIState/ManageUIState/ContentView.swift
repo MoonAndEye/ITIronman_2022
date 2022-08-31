@@ -12,6 +12,7 @@ struct PlayButton: View {
     
     var body: some View {
         Button(action: {
+            /// 加上 animation 效果
             withAnimation(.easeInOut(duration: 1)) {
                 self.isPlaying.toggle()
             }
@@ -23,13 +24,14 @@ struct PlayButton: View {
 }
 
 struct PlayerView: View {
-    var episode: Episode
+    var song: Song
     @State private var isPlaying: Bool = false
     
     var body: some View {
         VStack {
-            Text(episode.title)
-            Text(episode.showTitle)
+            Text(song.title)
+            Text(song.showTitle)
+            Text("author: \(song.author)")
             PlayButton(isPlaying: $isPlaying)
         }
         .background(isPlaying ? Color.green : Color.red) // Transitions with animation.
@@ -38,19 +40,23 @@ struct PlayerView: View {
 
 struct ContentView: View {
     
-    @State var episode = Episode(title: "Some Episode", showTitle: "Great show", isFavorite: false)
+    @State var song = Song(title: "Some Episode", showTitle: "Great show", author: "Tylor Swift", isFavorite: false)
     
     var body: some View {
-        PlayerView(episode: episode)
+        PlayerView(song: song)
     }
 }
 
 struct ContentView_Previews: PreviewProvider {
     
-    static var episode: Episode = Episode(title: "Some Episode", showTitle: "Great show", isFavorite: false)
+    @State static var isPlaying = false
+    
+    static var song: Song = Song(title: "Some Episode", showTitle: "Great show", author: "Tylor Swift", isFavorite: false)
     
     static var previews: some View {
-        ContentView()
-        PlayerView(episode: episode)
+//        ContentView()
+//        PlayButton(isPlaying: $isPlaying)
+//            .previewLayout(.fixed(width: 200, height: 200))
+        PlayerView(song: song)
     }
 }

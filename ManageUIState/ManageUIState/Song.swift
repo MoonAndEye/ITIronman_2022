@@ -7,10 +7,11 @@
 
 import Foundation
 
-struct Episode {
+struct Song {
     
-    var title: String
-    var showTitle: String
+    let title: String
+    let showTitle: String
+    let author: String
     var isFavorite: Bool
 }
 
