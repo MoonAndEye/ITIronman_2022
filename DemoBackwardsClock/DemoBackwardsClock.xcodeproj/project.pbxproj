@@ -13,6 +13,8 @@
 		9B155D9928BF8AA700E89AD6 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9B155D9828BF8AA700E89AD6 /* Preview Assets.xcassets */; };
 		9B155DA028BF8B5200E89AD6 /* ClockContainerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B155D9F28BF8B5200E89AD6 /* ClockContainerView.swift */; };
 		9B155DA228BF945D00E89AD6 /* HandShape.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B155DA128BF945D00E89AD6 /* HandShape.swift */; };
+		9BBF90F728C207F500EB61DC /* ClockDialView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BBF90F628C207F500EB61DC /* ClockDialView.swift */; };
+		9BBF90F928C20CE500EB61DC /* BackwardsClockNumberView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BBF90F828C20CE500EB61DC /* BackwardsClockNumberView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -23,6 +25,8 @@
 		9B155D9828BF8AA700E89AD6 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		9B155D9F28BF8B5200E89AD6 /* ClockContainerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClockContainerView.swift; sourceTree = "<group>"; };
 		9B155DA128BF945D00E89AD6 /* HandShape.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HandShape.swift; sourceTree = "<group>"; };
+		9BBF90F628C207F500EB61DC /* ClockDialView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClockDialView.swift; sourceTree = "<group>"; };
+		9BBF90F828C20CE500EB61DC /* BackwardsClockNumberView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackwardsClockNumberView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -42,7 +46,9 @@
 				9B155D9028BF8AA400E89AD6 /* DemoBackwardsClock */,
 				9B155D8F28BF8AA400E89AD6 /* Products */,
 			);
+			indentWidth = 2;
 			sourceTree = "<group>";
+			tabWidth = 2;
 		};
 		9B155D8F28BF8AA400E89AD6 /* Products */ = {
 			isa = PBXGroup;
@@ -59,6 +65,8 @@
 				9B155D9328BF8AA400E89AD6 /* ContentView.swift */,
 				9B155D9F28BF8B5200E89AD6 /* ClockContainerView.swift */,
 				9B155DA128BF945D00E89AD6 /* HandShape.swift */,
+				9BBF90F628C207F500EB61DC /* ClockDialView.swift */,
+				9BBF90F828C20CE500EB61DC /* BackwardsClockNumberView.swift */,
 				9B155D9528BF8AA700E89AD6 /* Assets.xcassets */,
 				9B155D9728BF8AA700E89AD6 /* Preview Content */,
 			);
@@ -143,8 +151,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9BBF90F728C207F500EB61DC /* ClockDialView.swift in Sources */,
 				9B155DA028BF8B5200E89AD6 /* ClockContainerView.swift in Sources */,
 				9B155D9428BF8AA400E89AD6 /* ContentView.swift in Sources */,
+				9BBF90F928C20CE500EB61DC /* BackwardsClockNumberView.swift in Sources */,
 				9B155DA228BF945D00E89AD6 /* HandShape.swift in Sources */,
 				9B155D9228BF8AA400E89AD6 /* DemoBackwardsClockApp.swift in Sources */,
 			);
