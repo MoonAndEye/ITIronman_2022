@@ -8,12 +8,19 @@
 import SwiftUI
 
 struct ClockDialView: View {
+  
+  var tickLength: CGFloat = 5
+  
   var body: some View {
     
     ZStack {
       Circle()
         .stroke()
         .padding(3)
+      
+      ticks
+        .padding(3)
+      
       HStack {
         Spacer()
         BackwardsClockNumberView()
@@ -21,11 +28,26 @@ struct ClockDialView: View {
       }
     }
   }
+  
+  private func isLongTick(_ position: Int) -> Bool {
+    return position % 5 == 0
+  }
+ 
+  var ticks: some View {
+
+    ForEach(0..<60) { position in
+      let longerTick = tickLength * 1.8
+
+      Tick(tickLength: isLongTick(position) ? longerTick : tickLength )
+        .stroke(lineWidth: 3)
+        .rotationEffect(.radians(Double.pi * 2 / 60 * Double(position)))
+    }
+  }
 }
 
 struct ClockDialView_Previews: PreviewProvider {
   static var previews: some View {
-    ClockDialView()
+    ClockDialView(tickLength: 5)
       .frame(width: 200, height: 200, alignment: .center)
   }
 }
