@@ -17,6 +17,7 @@
 		9BBF90F928C20CE500EB61DC /* BackwardsClockNumberView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BBF90F828C20CE500EB61DC /* BackwardsClockNumberView.swift */; };
 		9BBF90FB28C32DD700EB61DC /* Tick.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BBF90FA28C32DD700EB61DC /* Tick.swift */; };
 		9BBF90FE28C4F5DC00EB61DC /* AngleUtility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BBF90FD28C4F5DC00EB61DC /* AngleUtility.swift */; };
+		9BBF910228C4F63E00EB61DC /* DateUtility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BBF910128C4F63E00EB61DC /* DateUtility.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -31,6 +32,7 @@
 		9BBF90F828C20CE500EB61DC /* BackwardsClockNumberView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackwardsClockNumberView.swift; sourceTree = "<group>"; };
 		9BBF90FA28C32DD700EB61DC /* Tick.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tick.swift; sourceTree = "<group>"; };
 		9BBF90FD28C4F5DC00EB61DC /* AngleUtility.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AngleUtility.swift; sourceTree = "<group>"; };
+		9BBF910128C4F63E00EB61DC /* DateUtility.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateUtility.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -86,6 +88,7 @@
 			isa = PBXGroup;
 			children = (
 				9BBF90FD28C4F5DC00EB61DC /* AngleUtility.swift */,
+				9BBF910128C4F63E00EB61DC /* DateUtility.swift */,
 			);
 			path = Utilities;
 			sourceTree = "<group>";
@@ -180,6 +183,7 @@
 				9B155D9428BF8AA400E89AD6 /* ContentView.swift in Sources */,
 				9BBF90F928C20CE500EB61DC /* BackwardsClockNumberView.swift in Sources */,
 				9B155DA228BF945D00E89AD6 /* HandShape.swift in Sources */,
+				9BBF910228C4F63E00EB61DC /* DateUtility.swift in Sources */,
 				9B155D9228BF8AA400E89AD6 /* DemoBackwardsClockApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
