@@ -32,9 +32,9 @@ struct ClockContainerView: View {
       HandShape(handLength: .second)
         .fill(Color.red)
         .rotationEffect(Angle(degrees: secondDegree))
-//      Circle()
-//        .fill(Color.orange)
-//        .frame(width: 20, height: 20, alignment: .center)
+      Circle()
+        .fill(Color.orange)
+        .frame(width: 20, height: 20, alignment: .center)
     }
     .frame(width: width, height: height, alignment: .center)
     .onReceive(timer) { _ in
