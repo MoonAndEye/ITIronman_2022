@@ -18,7 +18,22 @@
 		9BBF90FB28C32DD700EB61DC /* Tick.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BBF90FA28C32DD700EB61DC /* Tick.swift */; };
 		9BBF90FE28C4F5DC00EB61DC /* AngleUtility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BBF90FD28C4F5DC00EB61DC /* AngleUtility.swift */; };
 		9BBF910228C4F63E00EB61DC /* DateUtility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BBF910128C4F63E00EB61DC /* DateUtility.swift */; };
+		9BBF911028C5F7BA00EB61DC /* DemoBackwardsClockTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BBF910F28C5F7BA00EB61DC /* DemoBackwardsClockTests.swift */; };
+		9BBF911628C5F80B00EB61DC /* DateUtility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BBF910128C4F63E00EB61DC /* DateUtility.swift */; };
+		9BBF911728C5F80E00EB61DC /* AngleUtility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BBF90FD28C4F5DC00EB61DC /* AngleUtility.swift */; };
+		9BBF911928C5F81B00EB61DC /* DateUtilityTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BBF911828C5F81B00EB61DC /* DateUtilityTests.swift */; };
+		9BBF911B28C5F87200EB61DC /* AngleUtilityTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BBF911A28C5F87100EB61DC /* AngleUtilityTests.swift */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		9BBF911128C5F7BA00EB61DC /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 9B155D8628BF8AA400E89AD6 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 9B155D8D28BF8AA400E89AD6;
+			remoteInfo = DemoBackwardsClock;
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		9B155D8E28BF8AA400E89AD6 /* DemoBackwardsClock.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DemoBackwardsClock.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -33,10 +48,21 @@
 		9BBF90FA28C32DD700EB61DC /* Tick.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tick.swift; sourceTree = "<group>"; };
 		9BBF90FD28C4F5DC00EB61DC /* AngleUtility.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AngleUtility.swift; sourceTree = "<group>"; };
 		9BBF910128C4F63E00EB61DC /* DateUtility.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateUtility.swift; sourceTree = "<group>"; };
+		9BBF910D28C5F7BA00EB61DC /* DemoBackwardsClockTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DemoBackwardsClockTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		9BBF910F28C5F7BA00EB61DC /* DemoBackwardsClockTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DemoBackwardsClockTests.swift; sourceTree = "<group>"; };
+		9BBF911828C5F81B00EB61DC /* DateUtilityTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateUtilityTests.swift; sourceTree = "<group>"; };
+		9BBF911A28C5F87100EB61DC /* AngleUtilityTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AngleUtilityTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		9B155D8B28BF8AA400E89AD6 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9BBF910A28C5F7BA00EB61DC /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -50,6 +76,7 @@
 			isa = PBXGroup;
 			children = (
 				9B155D9028BF8AA400E89AD6 /* DemoBackwardsClock */,
+				9BBF910E28C5F7BA00EB61DC /* DemoBackwardsClockTests */,
 				9B155D8F28BF8AA400E89AD6 /* Products */,
 			);
 			indentWidth = 2;
@@ -60,6 +87,7 @@
 			isa = PBXGroup;
 			children = (
 				9B155D8E28BF8AA400E89AD6 /* DemoBackwardsClock.app */,
+				9BBF910D28C5F7BA00EB61DC /* DemoBackwardsClockTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -106,6 +134,16 @@
 			path = Views;
 			sourceTree = "<group>";
 		};
+		9BBF910E28C5F7BA00EB61DC /* DemoBackwardsClockTests */ = {
+			isa = PBXGroup;
+			children = (
+				9BBF911A28C5F87100EB61DC /* AngleUtilityTests.swift */,
+				9BBF911828C5F81B00EB61DC /* DateUtilityTests.swift */,
+				9BBF910F28C5F7BA00EB61DC /* DemoBackwardsClockTests.swift */,
+			);
+			path = DemoBackwardsClockTests;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -126,6 +164,24 @@
 			productReference = 9B155D8E28BF8AA400E89AD6 /* DemoBackwardsClock.app */;
 			productType = "com.apple.product-type.application";
 		};
+		9BBF910C28C5F7BA00EB61DC /* DemoBackwardsClockTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 9BBF911528C5F7BA00EB61DC /* Build configuration list for PBXNativeTarget "DemoBackwardsClockTests" */;
+			buildPhases = (
+				9BBF910928C5F7BA00EB61DC /* Sources */,
+				9BBF910A28C5F7BA00EB61DC /* Frameworks */,
+				9BBF910B28C5F7BA00EB61DC /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				9BBF911228C5F7BA00EB61DC /* PBXTargetDependency */,
+			);
+			name = DemoBackwardsClockTests;
+			productName = DemoBackwardsClockTests;
+			productReference = 9BBF910D28C5F7BA00EB61DC /* DemoBackwardsClockTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -138,6 +194,10 @@
 				TargetAttributes = {
 					9B155D8D28BF8AA400E89AD6 = {
 						CreatedOnToolsVersion = 13.2.1;
+					};
+					9BBF910C28C5F7BA00EB61DC = {
+						CreatedOnToolsVersion = 13.2.1;
+						TestTargetID = 9B155D8D28BF8AA400E89AD6;
 					};
 				};
 			};
@@ -155,6 +215,7 @@
 			projectRoot = "";
 			targets = (
 				9B155D8D28BF8AA400E89AD6 /* DemoBackwardsClock */,
+				9BBF910C28C5F7BA00EB61DC /* DemoBackwardsClockTests */,
 			);
 		};
 /* End PBXProject section */
@@ -166,6 +227,13 @@
 			files = (
 				9B155D9928BF8AA700E89AD6 /* Preview Assets.xcassets in Resources */,
 				9B155D9628BF8AA700E89AD6 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9BBF910B28C5F7BA00EB61DC /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -188,7 +256,27 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		9BBF910928C5F7BA00EB61DC /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9BBF911728C5F80E00EB61DC /* AngleUtility.swift in Sources */,
+				9BBF911628C5F80B00EB61DC /* DateUtility.swift in Sources */,
+				9BBF911B28C5F87200EB61DC /* AngleUtilityTests.swift in Sources */,
+				9BBF911928C5F81B00EB61DC /* DateUtilityTests.swift in Sources */,
+				9BBF911028C5F7BA00EB61DC /* DemoBackwardsClockTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		9BBF911228C5F7BA00EB61DC /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 9B155D8D28BF8AA400E89AD6 /* DemoBackwardsClock */;
+			targetProxy = 9BBF911128C5F7BA00EB61DC /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
 		9B155D9A28BF8AA700E89AD6 /* Debug */ = {
@@ -365,6 +453,42 @@
 			};
 			name = Release;
 		};
+		9BBF911328C5F7BA00EB61DC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = PJPD95M4QP;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = io.marvinLin.DemoBackwardsClockTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/DemoBackwardsClock.app/DemoBackwardsClock";
+			};
+			name = Debug;
+		};
+		9BBF911428C5F7BA00EB61DC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = PJPD95M4QP;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = io.marvinLin.DemoBackwardsClockTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/DemoBackwardsClock.app/DemoBackwardsClock";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -382,6 +506,15 @@
 			buildConfigurations = (
 				9B155D9D28BF8AA700E89AD6 /* Debug */,
 				9B155D9E28BF8AA700E89AD6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		9BBF911528C5F7BA00EB61DC /* Build configuration list for PBXNativeTarget "DemoBackwardsClockTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9BBF911328C5F7BA00EB61DC /* Debug */,
+				9BBF911428C5F7BA00EB61DC /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

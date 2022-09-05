@@ -18,6 +18,8 @@ struct ClockContainerView: View {
   
   private let timer = Timer.publish(every: 0.1, on: .main, in: .common).autoconnect()
   
+  private let angleUtility: AngleUtility = .init()
+  
   var body: some View {
     ZStack {
       ClockDialView()
@@ -30,6 +32,9 @@ struct ClockContainerView: View {
       HandShape(handLength: .second)
         .fill(Color.red)
         .rotationEffect(Angle(degrees: secondDegree))
+//      Circle()
+//        .fill(Color.orange)
+//        .frame(width: 20, height: 20, alignment: .center)
     }
     .frame(width: width, height: height, alignment: .center)
     .onReceive(timer) { _ in
@@ -39,7 +44,10 @@ struct ClockContainerView: View {
   
   private func updateTime() {
     let timestamp = Date().timeIntervalSince1970
-    print("current timestamp: \(timestamp)")
+    
+    secondDegree = angleUtility.getBackwardsSecondHandRadius(from: timestamp)
+    minuteDegree = angleUtility.getBackwardsMinuteHandRadius(from: timestamp)
+    hourDegree = angleUtility.getBackwardsHourHandRadius(from: timestamp)
   }
 }
 
