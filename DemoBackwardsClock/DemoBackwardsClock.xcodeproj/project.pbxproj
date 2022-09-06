@@ -23,6 +23,8 @@
 		9BBF911728C5F80E00EB61DC /* AngleUtility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BBF90FD28C4F5DC00EB61DC /* AngleUtility.swift */; };
 		9BBF911928C5F81B00EB61DC /* DateUtilityTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BBF911828C5F81B00EB61DC /* DateUtilityTests.swift */; };
 		9BBF911B28C5F87200EB61DC /* AngleUtilityTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BBF911A28C5F87100EB61DC /* AngleUtilityTests.swift */; };
+		9BBF911E28C6569300EB61DC /* Clockwork.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BBF911D28C6569300EB61DC /* Clockwork.swift */; };
+		9BBF912228C713B000EB61DC /* BCWebView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BBF912128C713B000EB61DC /* BCWebView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -52,6 +54,8 @@
 		9BBF910F28C5F7BA00EB61DC /* DemoBackwardsClockTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DemoBackwardsClockTests.swift; sourceTree = "<group>"; };
 		9BBF911828C5F81B00EB61DC /* DateUtilityTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateUtilityTests.swift; sourceTree = "<group>"; };
 		9BBF911A28C5F87100EB61DC /* AngleUtilityTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AngleUtilityTests.swift; sourceTree = "<group>"; };
+		9BBF911D28C6569300EB61DC /* Clockwork.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Clockwork.swift; sourceTree = "<group>"; };
+		9BBF912128C713B000EB61DC /* BCWebView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BCWebView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -96,6 +100,7 @@
 			isa = PBXGroup;
 			children = (
 				9B155D9128BF8AA400E89AD6 /* DemoBackwardsClockApp.swift */,
+				9BBF911C28C6566200EB61DC /* Models */,
 				9BBF910028C4F5EF00EB61DC /* Views */,
 				9BBF90FC28C4F5C900EB61DC /* Utilities */,
 				9B155D9528BF8AA700E89AD6 /* Assets.xcassets */,
@@ -130,6 +135,7 @@
 				9BBF90F628C207F500EB61DC /* ClockDialView.swift */,
 				9BBF90FA28C32DD700EB61DC /* Tick.swift */,
 				9BBF90F828C20CE500EB61DC /* BackwardsClockNumberView.swift */,
+				9BBF912128C713B000EB61DC /* BCWebView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -142,6 +148,14 @@
 				9BBF910F28C5F7BA00EB61DC /* DemoBackwardsClockTests.swift */,
 			);
 			path = DemoBackwardsClockTests;
+			sourceTree = "<group>";
+		};
+		9BBF911C28C6566200EB61DC /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				9BBF911D28C6569300EB61DC /* Clockwork.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -245,6 +259,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				9BBF90FE28C4F5DC00EB61DC /* AngleUtility.swift in Sources */,
+				9BBF911E28C6569300EB61DC /* Clockwork.swift in Sources */,
 				9BBF90F728C207F500EB61DC /* ClockDialView.swift in Sources */,
 				9BBF90FB28C32DD700EB61DC /* Tick.swift in Sources */,
 				9B155DA028BF8B5200E89AD6 /* ClockContainerView.swift in Sources */,
@@ -252,6 +267,7 @@
 				9BBF90F928C20CE500EB61DC /* BackwardsClockNumberView.swift in Sources */,
 				9B155DA228BF945D00E89AD6 /* HandShape.swift in Sources */,
 				9BBF910228C4F63E00EB61DC /* DateUtility.swift in Sources */,
+				9BBF912228C713B000EB61DC /* BCWebView.swift in Sources */,
 				9B155D9228BF8AA400E89AD6 /* DemoBackwardsClockApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
