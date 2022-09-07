@@ -9,10 +9,9 @@ import SwiftUI
 
 @main
 struct DemoBackwardsClockApp: App {
-    var body: some Scene {
-        WindowGroup {
-          BCWebView(urlString: "https://en.wikipedia.org/wiki/Grace_Hopper")
-//            ClockContainerView()
-        }
+  var body: some Scene {
+    WindowGroup {
+      ClockContainerView()
     }
+  }
 }

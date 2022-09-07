@@ -14,27 +14,50 @@ struct ClockContainerView: View {
   
   @StateObject private var clockwork: Clockwork = .init()
   
+  @State private var isShowingGraceWikiSheet = false
+  
+  private let graceWikiPageURL = "https://en.wikipedia.org/wiki/Grace_Hopper"
+  
   private let angleUtility: AngleUtility = .init()
   
   var body: some View {
     ZStack {
-      ClockDialView()
-      HandShape(handLength: .hour)
-        .fill(Color.blue)
-        .rotationEffect(Angle(degrees: clockwork.hourAngle))
-      HandShape(handLength: .minute)
-        .fill(Color.cyan)
-        .rotationEffect(Angle(degrees: clockwork.minuteAngle))
-      HandShape(handLength: .second)
-        .fill(Color.red)
-        .rotationEffect(Angle(degrees: clockwork.secondAngle))
-      Circle()
-        .fill(Color.orange)
-        .frame(width: 20, height: 20, alignment: .center)
+      
+      VStack {
+        
+        Button {
+          
+          isShowingGraceWikiSheet.toggle()
+        } label: {
+          Image(systemName: "person.crop.circle")
+            .font(.system(size: 50))
+            .foregroundColor(.brown)
+        }
+        .sheet(isPresented: $isShowingGraceWikiSheet) {
+          BCWebView(urlString: graceWikiPageURL)
+        }
+        
+        Spacer()
+      }
+      
+      Group {
+        ClockDialView()
+        HandShape(handLength: .hour)
+          .fill(Color.blue)
+          .rotationEffect(Angle(degrees: clockwork.hourAngle))
+        HandShape(handLength: .minute)
+          .fill(Color.cyan)
+          .rotationEffect(Angle(degrees: clockwork.minuteAngle))
+        HandShape(handLength: .second)
+          .fill(Color.red)
+          .rotationEffect(Angle(degrees: clockwork.secondAngle))
+        Circle()
+          .fill(Color.orange)
+          .frame(width: 20, height: 20, alignment: .center)
+      }
+      .frame(width: width, height: height, alignment: .center)
     }
-    .frame(width: width, height: height, alignment: .center)
   }
-  
 }
 
 struct ClockContainerView_Previews: PreviewProvider {

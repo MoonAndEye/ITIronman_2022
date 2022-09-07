@@ -10,12 +10,27 @@ import WebKit
 
 struct BCWebView: View {
   
+  @Environment(\.dismiss) var dismiss
+  
   let urlString: String
   
   var body: some View {
     
     if let url = URL(string: urlString) {
-      WKWebViewContainer(url: url)
+      VStack {
+        HStack {
+          Spacer()
+          Button {
+            dismiss()
+          } label: {
+            Image(systemName: "x.circle")
+              .font(.system(size: 44))
+              .tint(.black)
+              .padding([.top, .trailing])
+          }
+        }
+        WKWebViewContainer(url: url)
+      }
     } else {
       URLNotCorrectView()
     }
