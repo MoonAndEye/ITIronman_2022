@@ -9,11 +9,18 @@ import SwiftUI
 
 struct ClockDialView: View {
   
+  @Binding var dialColor: Color
+  
   var tickLength: CGFloat = 5
   
   var body: some View {
     
     ZStack {
+      /// 真的會變色的部分
+      Circle()
+        .fill(dialColor)
+        .padding(3)
+      /// 外框
       Circle()
         .stroke()
         .padding(3)
@@ -46,8 +53,11 @@ struct ClockDialView: View {
 }
 
 struct ClockDialView_Previews: PreviewProvider {
+  
+  @State static var dialColor: Color = .green
+  
   static var previews: some View {
-    ClockDialView(tickLength: 5)
+    ClockDialView(dialColor: $dialColor, tickLength: 5)
       .frame(width: 200, height: 200, alignment: .center)
   }
 }

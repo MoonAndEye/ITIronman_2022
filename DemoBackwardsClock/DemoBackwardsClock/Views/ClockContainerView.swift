@@ -14,7 +14,11 @@ struct ClockContainerView: View {
   
   @StateObject private var clockwork: Clockwork = .init()
   
+  @State private var dialColor: Color = .white
+  
   @State private var isShowingGraceWikiSheet = false
+  
+  @State private var isShowingColorPicker = false
   
   private let graceWikiPageURL = "https://en.wikipedia.org/wiki/Grace_Hopper"
   
@@ -24,24 +28,17 @@ struct ClockContainerView: View {
     ZStack {
       
       VStack {
-        
-        Button {
-          
-          isShowingGraceWikiSheet.toggle()
-        } label: {
-          Image(systemName: "person.crop.circle")
-            .font(.system(size: 50))
-            .foregroundColor(.brown)
+        HStack {
+          Spacer()
+          wikiProfileButton
+          settingButton
+            .padding(.trailing, 5)
         }
-        .sheet(isPresented: $isShowingGraceWikiSheet) {
-          BCWebView(urlString: graceWikiPageURL)
-        }
-        
         Spacer()
       }
       
       Group {
-        ClockDialView()
+        ClockDialView(dialColor: $dialColor)
         HandShape(handLength: .hour)
           .fill(Color.blue)
           .rotationEffect(Angle(degrees: clockwork.hourAngle))
@@ -56,6 +53,35 @@ struct ClockContainerView: View {
           .frame(width: 20, height: 20, alignment: .center)
       }
       .frame(width: width, height: height, alignment: .center)
+    }
+  }
+  /// 將 wiki profile button 抽出
+  private var wikiProfileButton: some View {
+    Button {
+      
+      isShowingGraceWikiSheet.toggle()
+    } label: {
+      Image(systemName: "person.crop.circle")
+        .font(.system(size: 50))
+        .foregroundColor(.black)
+    }
+    .sheet(isPresented: $isShowingGraceWikiSheet) {
+      BCWebView(urlString: graceWikiPageURL)
+    }
+  }
+  /// 將設定按鈕抽出
+  private var settingButton: some View {
+    
+    Button {
+      
+      isShowingColorPicker.toggle()
+    } label: {
+      Image(systemName: "gearshape.circle")
+        .font(.system(size: 50))
+        .foregroundColor(.black)
+    }
+    .sheet(isPresented: $isShowingColorPicker) {
+      ColorPickerContainerView(dialColor: $dialColor)
     }
   }
 }
