@@ -16,7 +16,7 @@
 /* Begin PBXFileReference section */
 		9BC1F7F628CDB33300289916 /* DemoInfiniteMonkeyTyping.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DemoInfiniteMonkeyTyping.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9BC1F7F928CDB33300289916 /* DemoInfiniteMonkeyTypingApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DemoInfiniteMonkeyTypingApp.swift; sourceTree = "<group>"; };
-		9BC1F7FB28CDB33300289916 /* InfiniteMonkeyTypingContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfiniteMonkeyTypingContentView.swift; sourceTree = "<group>"; };
+		9BC1F7FB28CDB33300289916 /* InfiniteMonkeyTypingContentView.swift */ = {isa = PBXFileReference; indentWidth = 2; lastKnownFileType = sourcecode.swift; path = InfiniteMonkeyTypingContentView.swift; sourceTree = "<group>"; tabWidth = 2; };
 		9BC1F7FD28CDB33500289916 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		9BC1F80028CDB33500289916 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
