@@ -112,6 +112,8 @@ struct InfiniteMonkeyTypingContentView: View {
     typingTimer = Timer.publish(every: 0.1, on: .main, in: .common)
       .autoconnect()
       .sink { _ in
+        let typedCharacter = createRandomString()
+        print("發動產生文字: \(typedCharacter)")
         // TODO: 比對打字的邏輯之後處理
       }
   }
