@@ -20,6 +20,8 @@ struct InfiniteMonkeyTypingContentView: View {
   /// 發動「猴子」打字的 timer
   @State private var typingTimer: AnyCancellable?
   
+  @State private var logs: [String] = []
+  
   private var targetHint: String {
     if targetText.isEmpty {
       return "目前沒目標，請輸入目標文字在輸入框"
@@ -49,10 +51,10 @@ struct InfiniteMonkeyTypingContentView: View {
       
       monkeyLogsAndClearLogs
       
-      Rectangle()
-        .foregroundColor(.white)
-        .border(Color.blue)
-        .padding()
+      List(logs, id: \.self) { log in
+        let eachLog = "打出的字為: \(log)"
+        Text(eachLog)
+      }
       Spacer()
     }
   }
@@ -114,7 +116,8 @@ struct InfiniteMonkeyTypingContentView: View {
       .sink { _ in
         let typedCharacter = createRandomString()
         print("發動產生文字: \(typedCharacter)")
-        // TODO: 比對打字的邏輯之後處理
+        // 如果想和 console 一樣，最新的在最下面，就用 append()
+        logs.insert(typedCharacter, at: 0)
       }
   }
   /// 叫猴子停手
