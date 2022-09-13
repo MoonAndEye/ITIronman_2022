@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9BB0D72328D0D35C00EEB233 /* TypeLog.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BB0D72228D0D35C00EEB233 /* TypeLog.swift */; };
 		9BC1F7FA28CDB33300289916 /* DemoInfiniteMonkeyTypingApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BC1F7F928CDB33300289916 /* DemoInfiniteMonkeyTypingApp.swift */; };
 		9BC1F7FC28CDB33300289916 /* InfiniteMonkeyTypingContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BC1F7FB28CDB33300289916 /* InfiniteMonkeyTypingContentView.swift */; };
 		9BC1F7FE28CDB33500289916 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9BC1F7FD28CDB33500289916 /* Assets.xcassets */; };
@@ -14,6 +15,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		9BB0D72228D0D35C00EEB233 /* TypeLog.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TypeLog.swift; sourceTree = "<group>"; };
 		9BC1F7F628CDB33300289916 /* DemoInfiniteMonkeyTyping.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DemoInfiniteMonkeyTyping.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9BC1F7F928CDB33300289916 /* DemoInfiniteMonkeyTypingApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DemoInfiniteMonkeyTypingApp.swift; sourceTree = "<group>"; };
 		9BC1F7FB28CDB33300289916 /* InfiniteMonkeyTypingContentView.swift */ = {isa = PBXFileReference; indentWidth = 2; lastKnownFileType = sourcecode.swift; path = InfiniteMonkeyTypingContentView.swift; sourceTree = "<group>"; tabWidth = 2; };
@@ -53,6 +55,7 @@
 			children = (
 				9BC1F7F928CDB33300289916 /* DemoInfiniteMonkeyTypingApp.swift */,
 				9BC1F7FB28CDB33300289916 /* InfiniteMonkeyTypingContentView.swift */,
+				9BB0D72228D0D35C00EEB233 /* TypeLog.swift */,
 				9BC1F7FD28CDB33500289916 /* Assets.xcassets */,
 				9BC1F7FF28CDB33500289916 /* Preview Content */,
 			);
@@ -139,6 +142,7 @@
 			files = (
 				9BC1F7FC28CDB33300289916 /* InfiniteMonkeyTypingContentView.swift in Sources */,
 				9BC1F7FA28CDB33300289916 /* DemoInfiniteMonkeyTypingApp.swift in Sources */,
+				9BB0D72328D0D35C00EEB233 /* TypeLog.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
