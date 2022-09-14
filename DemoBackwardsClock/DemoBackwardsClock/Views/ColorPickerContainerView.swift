@@ -26,3 +26,10 @@ struct ColorPickerContainerView_Previews: PreviewProvider {
     ColorPickerContainerView(dialColor: $previewDialColor)
   }
 }
+
+func foo() {
+  
+  let color: Color = .gray
+
+  color.cgColor?.components
+}
