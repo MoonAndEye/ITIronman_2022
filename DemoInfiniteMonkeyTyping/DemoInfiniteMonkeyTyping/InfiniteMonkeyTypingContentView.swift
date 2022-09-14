@@ -11,6 +11,23 @@ import Combine
 struct InfiniteMonkeyTypingContentView: View {
   
   @State private var targetText = ""
+  /// 不管空格
+  private var trimmedTarget: String {
+    targetText.replacingOccurrences(of: " ", with: "")
+  }
+  /// 現在要打出來的「字母」index
+  @State private var currentTargetIndex = 0
+  /// 現在要打的「字母」
+  private var targetCharacter: String? {
+    /// 先簡化題目，不管大小寫
+    let characters = Array(trimmedTarget.lowercased())
+    
+    if characters.indices.contains(currentTargetIndex) {
+      return String(characters[currentTargetIndex])
+    }
+    
+    return nil
+  }
   
   @State private var monkeyTyperCount = 1
   
@@ -119,12 +136,39 @@ struct InfiniteMonkeyTypingContentView: View {
         // 如果想和 console 一樣，最新的在最下面，就用 append()
         let typingLog = TypingLog(typedString: typedCharacter)
         logs.insert(typingLog, at: 0)
+        if match(character: typedCharacter) {
+          updateLog("\n成功比對: \(typedCharacter)\n")
+          currentTargetIndex += 1
+          checkIsFinish() //有符合，就停手
+        }
       }
   }
+  
+  private func updateLog(_ string: String) {
+    let typingLog = TypingLog(typedString: string)
+    logs.insert(typingLog, at: 0)
+  }
+  
+  private func checkIsFinish() {
+    if trimmedTarget.count == currentTargetIndex {
+      updateLog("完成比對，猴子自動停手")
+      stopMonkeysTyping()
+    }
+  }
+  
   /// 叫猴子停手
   private func stopMonkeysTyping() {
     
     typingTimer?.cancel()
+  }
+  
+  private func match(character: String) -> Bool {
+    
+    guard let targetCharacter = targetCharacter else {
+      return false
+    }
+    
+    return character.contains(targetCharacter)
   }
 }
 
