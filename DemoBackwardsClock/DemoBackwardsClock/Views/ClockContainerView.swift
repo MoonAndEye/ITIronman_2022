@@ -16,6 +16,8 @@ struct ClockContainerView: View {
   
   @State private var dialColor: Color = .white
   
+  @State private var isShowingGraceQuote = false
+  
   @State private var isShowingGraceWikiSheet = false
   
   @State private var isShowingColorPicker = false
@@ -30,6 +32,7 @@ struct ClockContainerView: View {
       VStack {
         HStack {
           Spacer()
+          quotePageButton
           wikiProfileButton
           settingButton
             .padding(.trailing, 5)
@@ -53,8 +56,28 @@ struct ClockContainerView: View {
           .frame(width: 20, height: 20, alignment: .center)
       }
       .frame(width: width, height: height, alignment: .center)
+      .offset(x: 0, y: -180)
+      
+      CounterClockwiseQuote()
+        .frame(width: 250, height: 450, alignment: .center)
+        .offset(x: 0, y: 150)
     }
   }
+  
+  private var quotePageButton: some View {
+    Button {
+      
+      isShowingGraceQuote.toggle()
+    } label: {
+      Image(systemName: "quote.bubble")
+        .font(.system(size: 50))
+        .foregroundColor(.black)
+    }
+    .sheet(isPresented: $isShowingGraceQuote) {
+      CounterClockwiseQuote()
+    }
+  }
+  
   /// 將 wiki profile button 抽出
   private var wikiProfileButton: some View {
     Button {

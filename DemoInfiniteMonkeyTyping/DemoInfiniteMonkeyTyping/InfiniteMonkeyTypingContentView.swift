@@ -104,13 +104,20 @@ struct InfiniteMonkeyTypingContentView: View {
   private var monkeyLogsAndClearLogs: some View {
     HStack {
       Spacer()
-      Text("猴子的打字紀錄")
+      Text("打字紀錄")
       Button {
         // TODO: - 清掉打字
       } label: {
         Text("清除打字紀錄")
       }
       .padding(.leading, 20)
+      .buttonStyle(.bordered)
+      
+      Button {
+        createPDFFile()
+      } label: {
+        Text("輸出 pdf")
+      }
       .buttonStyle(.bordered)
       Spacer()
     }
@@ -191,6 +198,71 @@ extension InfiniteMonkeyTypingContentView {
       resultString += alphabet.randomElement() ?? ""
     }
     return resultString
+  }
+}
+
+// MARK: - solution 參考自 hackingwithswift
+//  https://www.hackingwithswift.com/forums/swiftui/how-to-generate-a-pdf-from-a-scrollview/5205
+extension InfiniteMonkeyTypingContentView {
+  private func createPDFFile() {
+    
+    let outputFileURL = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first!.appendingPathComponent("TypedStringLog.pdf")
+    let title = "Your Title\n"
+    var text = ""
+    
+    logs.forEach { log in
+      text += "\n\(log.typedString)"
+    }
+    
+    let titleAttributes = [NSAttributedString.Key.font: UIFont.boldSystemFont(ofSize: 36)]
+    let textAttributes = [NSAttributedString.Key.font: UIFont.systemFont(ofSize: 12)]
+    
+    let formattedTitle = NSMutableAttributedString(string: title, attributes: titleAttributes)
+    let formattedText = NSAttributedString(string: text, attributes: textAttributes)
+    formattedTitle.append(formattedText)
+    
+    // 1. Create Print Formatter with your text.
+    
+    let formatter = UISimpleTextPrintFormatter(attributedText: formattedTitle)
+    
+    // 2. Add formatter with pageRender
+    
+    let render = UIPrintPageRenderer()
+    render.addPrintFormatter(formatter, startingAtPageAt: 0)
+    
+    // 3. Assign paperRect and printableRect
+    
+    let page = CGRect(x: 0, y: 0, width: 595.2, height: 841.8) // A4, 72 dpi
+    let printable = page.insetBy(dx: 0, dy: 0)
+    
+    render.setValue(NSValue(cgRect: page), forKey: "paperRect")
+    render.setValue(NSValue(cgRect: printable), forKey: "printableRect")
+    
+    // 4. Create PDF context and draw
+    let rect = CGRect.zero
+    
+    let pdfData = NSMutableData()
+    UIGraphicsBeginPDFContextToData(pdfData, rect, nil)
+    
+    for i in 1...render.numberOfPages {
+      
+      UIGraphicsBeginPDFPage();
+      let bounds = UIGraphicsGetPDFContextBounds()
+      render.drawPage(at: i - 1, in: bounds)
+    }
+    
+    UIGraphicsEndPDFContext();
+    
+    // 5. Save PDF file
+    
+    do {
+      try pdfData.write(to: outputFileURL, options: .atomic)
+      
+      print("wrote PDF file with multiple pages to: \(outputFileURL.path)")
+    } catch {
+      
+      print("Could not create PDF file: \(error.localizedDescription)")
+    }
   }
 }
 
